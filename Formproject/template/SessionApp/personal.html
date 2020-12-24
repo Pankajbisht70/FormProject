@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% extends 'SessionApp/base.html'%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Name View</title>
+</head>
+<body>
+{%block child_block%}
+<h1> REGISTRATION FORM:</h1>
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Personal Info</h1>
+        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+
+        <form method="post" action="/Academic/">
+            {{form.as_p}}
+            {%csrf_token%}
+            <input type="submit" value="submit">
+
+        </form>
+
+
+    </div>
+</div>
+
+
+{%endblock%}
+</body>
+</html>
